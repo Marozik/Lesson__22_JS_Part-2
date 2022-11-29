@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ek">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- Налаштування поведінки в'юпорта -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson 22</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+			</header>
+			<main class="page">
+				<section class="home-work">
+					<div class="home-work__container">
+						<div class="home-work__item item-home">
+							<h2 class="item-home__title">Оператори</h2>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №1</h3>
+								<div class="task__text">
+									<p>console.log('35' + - "22");</p>
+									<p>Невірно, оператор "+" складе два рядки, результат буде 35-22
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №2</h3>
+								<div class="task__text">
+									<p>console.log('35' * "22");</p>
+									<p>Вірно, оператор "*" переведе рядки в числа і перемножить їх, резудьтат 770
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №3</h3>
+								<div class="task__text">
+									<p>console.log('558' > 22++);</p>
+									<p>Невірно, викличе помилку у консолі, інкремент ++ потрібно додавати до змінної
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №4</h3>
+								<div class="task__text">
+									<p>let usersCounter = 0;</p>
+									<p>let newUsers = usersCounter++;</p>
+									<p>console.log(newUsers);</p>
+									<p>Консоль поверне 0. Щоб консоль повернула 1 інкремент має бути префіксним
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №5</h3>
+								<div class="task__text">
+									<p>console.log(!false && 11 || 18 && !'');</p>
+									<p>Консоль поверне 11, спочатку перевіряється !false - поверне true, потім перевіриться &&, 11 - поверне true, перевірка зупинеться і поверне останнє значення
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №6</h3>
+								<div class="task__text">
+									<p>let name = 0;</p>
+									<p>console.log(name ?? "No name");</p>
+									<p>Поверне 0, тому що цей операнд не Null і не underfined
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="home-work__item item-home">
+							<h2 class="item-home__title">IF ELSE</h2>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №1</h3>
+								<div class="task__text">
+									<p>
+										if (1 === '1') { 
+											<br>
+											console.log('Правда!');
+											<br>
+										} else {
+											<br>
+											console.log('Брехня!');
+											<br>
+										}
+									</p>
+									<p>
+										Поверне 'Брехня!', оператор === строгої рівності
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №2</h3>
+								<div class="task__text">
+									<p>
+										if (5 == '5') {
+										<br>
+										console.log('Правда!');
+										<br>
+									} else {
+										<br>
+										console.log('Брехня!');
+										<br>
+									}
+									</p>
+									<p>Поверне 'Правда!', оператор == перетворює операнди в числа
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №3</h3>
+								<div class="task__text">
+									<p>let message = (92 > '11' && 58 < 100) ? 'Правда!' : 'Брехня!';</p>
+									<p>console.log(message);</p>
+									<p>Поверне 'Правда!'
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Вариант №4</h3>
+								<div class="task__text">
+									<p>if (0) {
+										<br>
+										console.log('Брехня!');
+										<br>
+									} else if(" ") {
+										<br>
+										console.log('Правда!');
+										<br>
+									}
+									</p>
+									<p>Поверне 'Правда!'. 0 - поверне false, " " - поверне true, рядок не попожній.</p>
+								</div>
+							</div>
+						</div>
+						<div class="home-work__item item-home">
+							<h2 class="item-home__title">Цикли For While</h2>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №1</h3>
+								<div class="task__text">
+									<p>
+										Вивести в консоль числа від 1 до 5
+									</p>
+									<p>
+										for (let i = 0; i < 6; i++) {
+											<br>
+											console.log(i);
+											<br>
+										}
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №2</h3>
+								<div class="task__text">
+									<p>
+										Останнє число в консолі буле 0, вірно?
+									</p>
+									<p>
+										let num = 8;
+										<br>
+										while (num) {
+											<br>
+											console.log(num);
+											<br>
+											num--;
+											<br>
+										}
+									</p>
+									<p>Останнє число в консолі буде 1. 0 === false</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №3</h3>
+								<div class="task__text">
+									<p>Переписати на while</p>
+									<p>for (let num = 0; num < 3; num++) {
+										<br>
+										console.log(`Число: ${num}`);
+										<br>
+									}
+									</p>
+									<p>let num = 0;
+										<br>
+										while (num < 3) {
+											<br>
+											console.log(`Число: ${num}`);
+											<br>
+											num++;
+											<br>
+										}
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №4</h3>
+								<div class="task__text">
+									<p>Припинити роботу цикла №1 коли size рівна 1
+									</p>
+									<p>for (let num = 0; num < 2; num++) {
+										<br>
+										for (let size = 0; num < 3; size++) {
+											<br>
+											console.log(size);
+											<br>
+											if (size == 1)break
+											<br>
+										}
+									}</p>
+								</div>
+							</div>
+						</div>
+						<div class="home-work__item item-home">
+							<h2 class="item-home__title">Числа в JS</h2>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №1</h3>
+								<div class="task__text">
+									<p>
+										Отримати правильне значення округлення
+										<br>
+										let numOne = Math.round(1.005 * 100) /100;
+										<br>
+										console.log(numOne);
+										<br>
+										Виведе 1 що невірно 
+									</p>
+									<p>
+										let num = 1.005 + Number.EPSILON;
+										<br>
+										let numOne = Math.round(num * 100) /100;
+										<br>
+										console.log(numOne);
+										<br>
+										Вірно
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №2</h3>
+								<div class="task__text">
+									<p>
+										Отримати число 135.58 з рядка 
+										<br>
+										let value = parseFloat("135.58px");
+										<br>
+										console.log(value);
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №3</h3>
+								<div class="task__text">
+									<p>Побудувати правильне умовне вітвлення</p>
+									<p>
+										let value = 58 + "Freelancer";
+										<br>
+										if (isNaN) {
+											<br>
+											console.log('Результат виразу NaN');
+											<br>
+										}
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №4</h3>
+								<div class="task__text">
+									<p>
+										Знайти максимальне число з 10, 58, 39, -150, 0
+									</p>
+									<p>
+										console.log(Math.max(10, 58, 39, -150, 0));
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №5</h3>
+								<div class="task__text">
+									<p>Округлити число 58.858 до числа 58
+									</p>
+									<p>
+										let someNum = Math.floor(58.858);
+										<br>
+										console.log(someNum);
+										<br>
+										Консоль виведе 58
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="home-work__item item-home">
+							<h2 class="item-home__title">Рядки в JS</h2>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №1</h3>
+								<div class="task__text">
+									<p>
+										Чи правильний запис
+										<br>
+										let fls = "freelancer";
+										<br>
+										let text = 'Hello! I am a ${fls}';
+										<br>
+										Цей запис невірний, потрібно використовувати зворотні лапки
+									</p>
+									<p>
+										let fls = "freelancer";
+										<br>
+										let text = `Hello! I am a ${fls}`;
+										<br>
+										console.log(text);
+										<br>
+										Вірний запис
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №2</h3>
+								<div class="task__text">
+									<p>
+										Отримати символ "n" рядку:
+										<br>
+										let text = 'freelancer';
+										<br>
+										console.log(text[6]);
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №3</h3>
+								<div class="task__text">
+									<p>Вірно? </p>
+									<p>
+										let text = 123 + '456';
+										<br>
+										Очікуємо 579
+										<br>
+										console.log(text);
+										<br>
+										Невірно, оператор + з'єднає два рядки, він не перетворює тип даних
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №4</h3>
+								<div class="task__text">
+									<p>
+										Отримати рядок у верхньому регістрі
+									</p>
+									<p>
+										let text = 'freelancer';
+										<br>
+										let result = text.toUpperCase();
+										<br>
+										console.log(result);
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №5</h3>
+								<div class="task__text">
+									<p>Отримати підрядок "lan" з:
+									</p>
+									<p>
+										let text = 'freelancer';
+										<br>
+										console.log(text.slice(4, 7));
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №6</h3>
+								<div class="task__text">
+									<p>true чи false? 
+									</p>
+									<p>
+										let text = 'фрілансер';
+										<br>
+										console.log(text.includes('лан', 4));
+										<br>
+										false
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+			</footer>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
